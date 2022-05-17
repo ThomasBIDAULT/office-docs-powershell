@@ -48,7 +48,7 @@ where the audio file MainAnnouncement.wav will be played to the caller.
 
 ### Example 3
 ```powershell
-$UserObjectId = (Get-CsOnlineUser -Identity user@contoso.com).ObjectId
+$UserObjectId = (Get-CsOnlineUser -Identity user@contoso.com).identity
 New-CsTeamsUnassignedNumberTreatment -Identity TR2 -Pattern "^\+15552224444$" -TargetType User -Target $UserObjectId -TreatmentPriority 3
 ```
 This example creates a treatment that will route all calls to the number +1 (555) 222-4444 to the user user@contoso.com.
